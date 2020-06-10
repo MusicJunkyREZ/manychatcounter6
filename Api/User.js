@@ -46,7 +46,7 @@ route.post('/', async (req, res) => {
 
 route.get('/getUsers', async (db, res) => {
 
-    mongo.connect(`mongodb+srv://${username}:${password}@manychat-counter5-2gp0x.mongodb.net/test?retryWrites=true&w=majority`, async function (err, db) {
+    mongo.connect(`mongodb+srv://${username}:${password}@manychat-counter6-ezjki.mongodb.net/test?retryWrites=true&w=majority`, async function (err, db) {
     if (err) throw err;
     var dB = db.db('test');
     var currentUsers = await dB.collection('users').find({}).toArray();
@@ -58,7 +58,7 @@ route.get('/getUsers', async (db, res) => {
 // Use the below route for counter
 route.get('/getTodaysUsers', async (db, res) => {
     // This gets all the information
-    mongo.connect(`mongodb+srv://${username}:${password}@manychat-counter5-2gp0x.mongodb.net/test?retryWrites=true&w=majority`, async function (err, db) {
+    mongo.connect(`mongodb+srv://${username}:${password}@manychat-counter6-ezjki.mongodb.net/test?retryWrites=true&w=majority`, async function (err, db) {
         if (err) throw err;
         var dB = db.db('test');
         var currentUsers = await dB.collection('users').find({}).toArray();
